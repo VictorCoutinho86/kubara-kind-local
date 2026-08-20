@@ -42,7 +42,7 @@ clusters:
       kyverno-policy-reporter:
         status: disabled
       loki:
-        status: disabled
+        status: enabled
       longhorn:
         status: disabled
       metallb:
@@ -52,7 +52,7 @@ clusters:
       oauth2-proxy:
         status: disabled
       reloader:
-        status: disabled
+        status: enabled
       traefik:
         status: enabled
       velero:

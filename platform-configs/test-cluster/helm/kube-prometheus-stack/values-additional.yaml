@@ -40,6 +40,12 @@ kube-prometheus-stack:
         limits:
           memory: 128Mi
   grafana:
+    extraVolumes:
+      - name: grafana-tmp
+        emptyDir: {}
+    extraVolumeMounts:
+      - name: grafana-tmp
+        mountPath: /tmp
     ingress:
       enabled: true
       annotations: {}
