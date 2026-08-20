@@ -1,0 +1,16 @@
+# Terraform local state
+**/.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+crash.log
+crash.*.log
+
+# Secrets / local runtime
+.env
+.local/
+.kubara/
+terraform.tfvars
+
+# OS
+.DS_Store

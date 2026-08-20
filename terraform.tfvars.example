@@ -1,0 +1,12 @@
+# Copy to terraform.tfvars and edit.
+
+# project_name    = "test-cluster"
+# project_stage   = "local"
+# argocd_password = "magic"
+
+# REQUIRED: your GitOps repository URL.
+repo_url = "https://github.com/your-user/your-gitops-repo.git"
+
+# Only needed if the repository is private.
+# git_username = "your-user"
+# git_pat     = "your-token"
