@@ -1,10 +1,8 @@
 traefik:
-  api:
-    basePath: /traefik
   ingressRoute:
     dashboard:
       enabled: true
       entryPoints:
         - websecure
-      matchRule: Host(`172.20.0.3.traefik.me`) && PathPrefix(`/traefik`)
+      matchRule: Host(`traefik.coutinho.local`)
       tls: {}

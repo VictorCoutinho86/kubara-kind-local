@@ -3,7 +3,7 @@ clusters:
   - name: test-cluster
     stage: local
     type: hub
-    dnsName: 172.20.0.3.traefik.me
+    dnsName: coutinho.local
     ssoOrg: local
     ssoTeam: local
     ingressClassName: traefik

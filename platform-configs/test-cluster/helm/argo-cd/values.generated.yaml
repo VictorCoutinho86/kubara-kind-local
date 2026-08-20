@@ -136,7 +136,8 @@ argo-cd:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-staging
     ingress:
-      path: "/argocd"
+      hostname: argocd.coutinho.local
+      path: "/"
       ingressClassName: traefik
       tls: true
       annotations:
@@ -147,11 +148,9 @@ argo-cd:
       policy.csv: |
         g, local:local, role:admin
     params:
-      server.rootpath: /argocd
-      server.basehref: /argocd
       server.insecure: true
   global:
-    domain: 172.20.0.3.traefik.me
+    domain: coutinho.local
     revisionHistoryLimit: 5
     imagePullSecrets:
       - name: image-pull-secret

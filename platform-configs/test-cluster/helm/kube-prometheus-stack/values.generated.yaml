@@ -24,14 +24,14 @@ kube-prometheus-stack:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-staging
       paths:
-        - /prometheus
+        - /
       pathType: ImplementationSpecific
       hosts:
-        - 172.20.0.3.traefik.me
+        - prometheus.coutinho.local
       tls:
         - secretName: tls-prometheus
           hosts:
-            - 172.20.0.3.traefik.me
+            - prometheus.coutinho.local
 
 
     prometheusSpec:
@@ -47,8 +47,7 @@ kube-prometheus-stack:
             resources:
               requests:
                 storage: 10Gi
-      externalUrl: https://172.20.0.3.traefik.me/prometheus
-      routePrefix: /prometheus
+      externalUrl: https://prometheus.coutinho.local
     thanosServiceMonitor:
       serviceMonitor:
         additionalLabels:
@@ -62,14 +61,14 @@ kube-prometheus-stack:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-staging
       paths:
-        - /alertmanager
+        - /
       pathType: ImplementationSpecific
       hosts:
-        - 172.20.0.3.traefik.me
+        - alertmanager.coutinho.local
       tls:
         - secretName: tls-alertmanager
           hosts:
-            - 172.20.0.3.traefik.me
+            - alertmanager.coutinho.local
 
 
 # Below is an example alertmanager.config section:
@@ -117,8 +116,7 @@ kube-prometheus-stack:
 #        - msteams-webhook-url
 #        - uptimerobot-webhook-url
 
-      externalUrl: https://172.20.0.3.traefik.me/alertmanager
-      routePrefix: /alertmanager
+      externalUrl: https://alertmanager.coutinho.local
 
   kube-state-metrics:
     prometheus:
@@ -165,18 +163,17 @@ kube-prometheus-stack:
       ingressClassName: traefik
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-staging
-      path: /grafana
+      path: /
       pathType: ImplementationSpecific
       hosts:
-        - 172.20.0.3.traefik.me
+        - grafana.coutinho.local
       tls:
         - secretName: tls-grafana
           hosts:
-            - 172.20.0.3.traefik.me
+            - grafana.coutinho.local
     grafana.ini:
       server:
-        root_url: https://172.20.0.3.traefik.me/grafana/
-        serve_from_sub_path: true
+        root_url: https://grafana.coutinho.local/
     additionalDataSources:
       - access: proxy
         isDefault: false

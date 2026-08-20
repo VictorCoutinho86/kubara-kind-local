@@ -3,7 +3,7 @@
 # To customize values, you can add additional files named values-*.yaml to this directory.
 
 ingress:
-  host: 172.20.0.3.traefik.me
+  host: homer.coutinho.local
   path: "/"
   ingressClassName: traefik
   annotations:
@@ -93,22 +93,22 @@ dashboardConfig:
       items:
         - name: "argocd"
           logo: "/assets/tools/argocd.png"
-          url: "/argocd/"
+          url: "https://argocd.coutinho.local/"
           subtitle: "GitOps Deployment Dashboard"
           target: "_blank"
         - name: "grafana"
           logo: "/assets/tools/grafana.png"
-          url: "/grafana/"
+          url: "https://grafana.coutinho.local/"
           subtitle: "Monitoring Dashboards"
           target: "_blank"
         - name: "prometheus"
           logo: "/assets/tools/prometheus.png"
-          url: "/prometheus/"
+          url: "https://prometheus.coutinho.local/"
           subtitle: "Prometheus Dashboard"
           target: "_blank"
         - name: "alertmanager"
           logo: "/assets/tools/alertmanager.png"
-          url: "/alertmanager/"
+          url: "https://alertmanager.coutinho.local/"
           subtitle: "Alertmanager Dashboard"
           target: "_blank"
     - name: "DevOps Links"

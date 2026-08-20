@@ -65,7 +65,7 @@ argo-cd:
       tls: false
   configs:
     cm:
-      url: http://172.20.0.3.traefik.me/argocd
+      url: http://argocd.coutinho.local
     rbac:
       policy.default: role:admin
       policy.csv: ""
